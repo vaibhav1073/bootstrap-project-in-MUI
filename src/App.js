@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { Container } from "@mui/system";
+import Navbar from "./Navbar/Navbar";
+import Main from "./Main/Main";
+import Footer from "./Footer/Footer";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{display:'flex', alignItems:'center', flexDirection:'column'}}>
+      
+      <Navbar></Navbar>
+      <Container sx={{bgcolor:'pink',marginTop:4,border:'2px solid black'}}>
+      <Main></Main>
+    </Container>
+    <Footer />
     </div>
+  
   );
 }
 
